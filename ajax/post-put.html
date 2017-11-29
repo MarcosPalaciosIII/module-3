@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> AJAX POST & PUT </title>
+
+	<!-- Bootstrap first, then your style.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="./css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <header>
+      <h1> AJAX POST & PUT </h1>
+
+      <nav>
+        <a href="./index.html"> AJAX GET </a>
+        <a href="./post-put.html"> AJAX POST & PUT </a>
+      </nav>
+    </header>
+
+
+    <button class="postWalle"> ADD Wall-E </button>
+
+
+    <h2> Add a Character </h2>
+
+    <form class="postCharacter">
+      <label for="char-name"> Name </label>
+      <input id="char-name" type="text" placeholder="EVA" />
+      <br />
+
+      <label for="char-weapon"> Weapon </label>
+      <input id="char-weapon" type="text" placeholder="e.g. Arm Blaster" />
+
+      <label for="char-job"> Occupation </label>
+      <input id="char-job" type="text" placeholder="e.g. Scout Robot" />
+
+      <button> Add This Character </button>
+    </form>
+    <hr />
+
+    <ul class="feedback">
+
+    </ul>
+
+    <hr />
+
+    <h2>  Edit a Character </h2>
+
+    <form class="patchCharacter">
+      <labal for="update-id"> What is the ID of the character? </labal>
+      <input id="update-id" type="number" placeholder="e.g. 50" />
+
+      <labal for="update-name"> Name </labal>
+      <input id="update-name" type="text" placeholder="e.g. Male Civilian #1" />
+
+      <label for="update-weapon"> Weapon </label>
+      <input id="update-weapon" type="text" placeholder="e.g. Soda (Super Gulp!)" />
+
+      <label for="update-job"> Occupation </label>
+      <input id="update-job" type="text" placeholder="Sitting on a hover chair" />
+
+      <button> Save Changes </button>
+    </form>
+
+
+    <footer>
+      <p> Made with 💗 at Ironhack. </p>
+    </footer>
+
+
+	<!-- JQuery first, then Bootstrap, then your script -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="./js/post-put.js"></script>
+
+  </body>
+</html>
