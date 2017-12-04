@@ -1,0 +1,28 @@
+<h2> Travel Selection </h2>
+
+
+<select [(ngModel)]="destination">
+  <option value=""> Select a destination </option>
+  <option value="it"> Italy </option>
+  <option value="th"> Thailand </option>
+  <option value="en"> England </option>
+  <option value="ph"> Philippines </option>
+  <option value="au"> Australia </option>
+  <option value="pr"> Puerto Rico </option>
+  <option value="in"> India </option>
+  <option value="ma"> Maldives </option>
+  <option value="br"> Brazil </option>
+  <option value="mn"> Mongolia </option>
+</select>
+
+
+<div [ngSwitch]="destination">
+  <p *ngSwitchCase="'pr'"> 🥑 Bienvenido/a 🇵🇷  </p>
+  <p *ngSwitchCase="'au'"> 🐨 Welcome, mate! 🇦🇺 </p>
+  <p *ngSwitchCase="'it'"> 🍕 Benvenuto 🇮🇹 </p>
+  <p *ngSwitchCase="'in'"> 🌶 Welcome, friend! 🇮🇳 </p>
+  <p *ngSwitchCase="'br'"> 🎉 Bem Vinda/o 🇧🇷 </p>
+  <p *ngSwitchCase="'th'"> 🍣 สวัสดี 🇹🇭 </p>
+  <p *ngSwitchDefault> Save travels! 🛫 </p>
+
+</div>

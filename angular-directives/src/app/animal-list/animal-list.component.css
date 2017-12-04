@@ -1,0 +1,10 @@
+.animalList ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+}

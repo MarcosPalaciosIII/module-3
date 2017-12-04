@@ -1,18 +1,22 @@
-<header>
-  <h1> {{ title }} </h1>
-</header>
+<div [ngStyle]="{ color: textColor }">
 
-<app-number-input></app-number-input>
+  <header>
+    <h1> {{ title }} </h1>
+  </header>
 
-<hr />
+  <app-number-input></app-number-input>
 
-<app-animal-list></app-animal-list>
+  <hr />
 
-<hr />
+  <app-animal-list></app-animal-list>
+
+  <hr />
+
+  <app-travel-selection></app-travel-selection>
 
 
+  <footer>
+    Made with 🧀 at Ironhack.
+  </footer>
 
-
-<footer>
-  Made with 🧀 at Ironhack.
-</footer>
+</div>
