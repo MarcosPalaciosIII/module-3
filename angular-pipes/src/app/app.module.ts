@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { CryptoTrackerComponent } from './crypto-tracker/crypto-tracker.component';
+import { DateChangerComponent } from './date-changer/date-changer.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CryptoTrackerComponent,
+    DateChangerComponent
   ],
   imports: [
     BrowserModule
