@@ -1,0 +1,18 @@
+<h2> ngClass </h2>
+
+<label for="message-input"> Type a Message </label>
+<input id="message-input" type="text" placeholder="e.g. Life is like a box of chocolates" [(ngModel)]="userText" />
+
+
+<h3 [ngClass]="{
+    'big-text': textConfig.isBig,
+    'comic-font': textConfig.isComic,
+    'rainbow-colored': textConfig.isColorful
+    }">
+  {{ userText }}
+</h3>
+
+
+<button (click)="toggleBig()"> Change Size </button>
+<button (click)="toggleFont()"> Change Font </button>
+<button (click)="toggleColor()"> Change Color </button>

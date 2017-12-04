@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
       () => {
         this.textColor = this.getRandomColor();
       },
-      2200
+      7000
     );
   }
 

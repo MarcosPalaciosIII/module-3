@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NumberInputComponent } from './number-input/number-input.component';
 import { AnimalListComponent } from './animal-list/animal-list.component';
 import { TravelSelectionComponent } from './travel-selection/travel-selection.component';
+import { TextConfiguratorComponent } from './text-configurator/text-configurator.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { TravelSelectionComponent } from './travel-selection/travel-selection.co
     AppComponent,
     NumberInputComponent,
     AnimalListComponent,
-    TravelSelectionComponent
+    TravelSelectionComponent,
+    TextConfiguratorComponent
   ],
   imports: [
     BrowserModule,
