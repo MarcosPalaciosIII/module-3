@@ -1,0 +1,21 @@
+<header>
+  <h1> Angular Pipes </h1>
+</header>
+
+<label for="text-input"> Type Some Text </label>
+<input id="text-input" type="text" placeholder="e.g. Bacon improves any food" [(ngModel)]="userText" />
+
+<h2> Your Text </h2>
+<p> {{userText}} </p>
+
+<h2> Uppercased </h2>
+<p> {{userText | uppercase}} </p>
+
+<h2> Lowercased </h2>
+<p> {{userText | lowercase}} </p>
+
+<footer>
+  <p>
+    Made with 🥓 at Ironhack
+  </p>
+</footer>
