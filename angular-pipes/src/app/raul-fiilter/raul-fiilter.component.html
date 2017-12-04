@@ -1,0 +1,16 @@
+<h2> The Many Faces of Puerto Rican Actor Raul Julia </h2>
+
+<label for="serch-input"> Search For Your Favorite Raul </label>
+<input id="search-input" type="text" placeholder="e.g. 'victorious'" [(ngModel)]="raulSearch" />
+
+<ul>
+  <li *ngFor="let oneRaul of (listOfRauls | searchByName:raulSearch)">
+    <h3> {{ oneRaul.name }} </h3>
+    <img [src]="oneRaul.imageUrl" />
+  </li>
+</ul>
+
+
+<!-- for (let x of array) {
+
+} -->

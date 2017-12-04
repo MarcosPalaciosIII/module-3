@@ -7,13 +7,19 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CryptoTrackerComponent } from './crypto-tracker/crypto-tracker.component';
 import { DateChangerComponent } from './date-changer/date-changer.component';
+import { EmojifyPipe } from './my-pipes/emojify.pipe';
+import { RaulFiilterComponent } from './raul-fiilter/raul-fiilter.component';
+import { SearchByNamePipe } from './my-pipes/search-by-name.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CryptoTrackerComponent,
-    DateChangerComponent
+    DateChangerComponent,
+    EmojifyPipe,
+    RaulFiilterComponent,
+    SearchByNamePipe
   ],
   imports: [
     BrowserModule
