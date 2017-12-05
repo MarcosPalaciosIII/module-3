@@ -1,0 +1,12 @@
+<blockquote>
+  <h3> Quote #{{ theQuote.id }}</h3>
+  <p class="quote"> "{{ theQuote.text }}" </p>
+  <h4 class="author"> - {{ theQuote.author }} </h4>
+</blockquote>
+
+<input type="text" placeholder="Edit this quote" [(ngModel)]="quoteEdit" />
+<br />
+
+<button (click)="notifyForDeletion()"> Delete Quote </button>
+
+<hr />

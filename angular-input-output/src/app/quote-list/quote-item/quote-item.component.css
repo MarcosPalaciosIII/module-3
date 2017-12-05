@@ -1,0 +1,16 @@
+blockquote {
+  border-left: 5px solid grey;
+  padding-left: 10px;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.author {
+  color: grey;
+}
+
+.author: before {
+  content: "-";
+}
