@@ -1,0 +1,10 @@
+/* Only applies to "app.component.html" */
+div {
+  border: 3px dotted deeppink;
+  text-align: center;
+}
+
+ h1 {
+   text-align: center;
+   font-size: 35px;
+ }

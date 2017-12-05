@@ -91,4 +91,4 @@ function patchCharacter (myId, myName, myWeapon, myOccupation) {
     console.log("ERROR!!");
     console.log(err);
   });
-}
+} // patchCharacter
