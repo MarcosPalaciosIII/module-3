@@ -1,0 +1,42 @@
+<h2> Sign Up to Angular Forms </h2>
+
+<!-- Disable ugly browser validation message with "novalidate" -->
+<form id="form" (ngSubmit)="submitForm($event)" #myForm="ngForm" novalidate>
+  <label for="username-input"> Username </label>
+  <input id="username-input" type="text" placeholder="nizaroni" [(ngModel)]="signupInfo.username" name="username" required minlength="6" maxlength="25" #myNameInput="ngModel" />
+  <br />
+
+  <div class="error" *ngIf="myNameInput.errors && myNameInput.touched">
+    <p *ngIf="myNameInput.errors.required">
+      Username is required.
+    </p>
+
+    <p *ngIf="myNameInput.errors.minlength">
+      Username must have atleast 6 characters.
+    </p>
+
+    <p *ngIf="myNameInput.errors.maxlength">
+      Username can't be longer than 25 characters.
+    </p>
+  </div>
+
+  <br />
+
+  <label for="password-input"> Password </label>
+  <input id="password-input" type="password" placeholder="e.g. swordfish" [(ngModel)]="signupInfo.password" name="password" required minlength="16" #myPassInput="ngModel" />
+  <br />
+
+  <div class="error" *ngIf="myPassInput.errors && myPassInput.touched">
+    <p *ngIf="myPassInput.errors.required">
+      Password is required.
+    </p>
+
+    <p *ngIf="myPassInput.errors.minlength">
+      Password much be atleast 16 characters.
+    </p>
+  </div>
+
+  <br />
+
+  <button *ngIf="myForm.valid"> Sign Up </button>
+</form>
