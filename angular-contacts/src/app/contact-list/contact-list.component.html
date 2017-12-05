@@ -1,0 +1,11 @@
+<h2> Contact List </h2>
+
+<ul class="contact-list-display">
+  <li *ngFor="let oneContact of contactThang.contacts">
+    <app-contact-item [contactInfo]="oneContact"></app-contact-item>
+  </li>
+</ul>
+
+<hr />
+
+<app-contact-form></app-contact-form>

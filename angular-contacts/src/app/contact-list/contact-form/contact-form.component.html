@@ -1,0 +1,14 @@
+<h2> Contact Form </h2>
+
+<form (ngSubmit)="contactSubmit()" id="form">
+  <label for="contact-name"> Contact Name </label>
+  <input id="contact-name" type="text" placeholder="e.g. Francois Flanders" [(ngModel)]="theContact.name" name="name" />
+  <br />
+
+  <label for="contact-phone"> Contact Phone Number </label>
+  <input id="contact-phone" type="tel" placeholder="e.g. 333-333-3333" [(ngModel)]="theContact.phone" name="phone" />
+  <br />
+  <br />
+
+  <button> Save This Contact </button>
+</form>
