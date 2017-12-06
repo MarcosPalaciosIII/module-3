@@ -47,4 +47,20 @@ export class ContactService {
     this.contacts.splice(contactIndex, 1);
   }
 
+  getContact(contactId: number|string) {
+    contactId = Number(contactId);
+
+    let contactInfo;
+
+    this.contacts.forEach((oneContact) => {
+      if (oneContact.id === contactId) {
+        contactInfo = oneContact;
+      }
+    });
+    return contactInfo;
+
+    // PRO WAY
+    // return this.contacts.find(oneContact => oneCtonact.id === contactId);
+  }
+
 }
