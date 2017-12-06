@@ -1,0 +1,9 @@
+<h2> Chuck Norris Jokes </h2>
+
+<button (click)="fetchJoke()"> Get a New Joke </button>
+
+<ul>
+  <li *ngFor="let oneJoke of jokeList">
+    {{ oneJoke }}
+  </li>
+</ul>
