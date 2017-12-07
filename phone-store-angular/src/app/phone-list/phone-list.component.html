@@ -5,5 +5,10 @@
     <h3> Phone: {{ onePhone.name }} </h3>
     <p> By <i>{{ onePhone.brand }}</i> </p>
     <img [src]="onePhone.image" />
+    <br />
+
+    <a routerLink="/phones/{{ onePhone._id }}"> See Details </a>
+
+    <!-- <a [routerLink]="['/phones', onePhone._id]"> See Details </a> -->
   </li>
 </ul>

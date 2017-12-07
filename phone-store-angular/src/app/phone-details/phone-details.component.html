@@ -1,3 +1,13 @@
-<p>
-  phone-details works!
-</p>
+<h2> Phone Details </h2>
+
+<h3> {{ phoneInfo.name }} </h3>
+
+<p> by <i>{{ phoneInfo.brand }}</i> </p>
+
+<img [src]="phoneInfo.image" />
+
+<ul>
+  <li *ngFor="let oneSpec of phoneInfo.specs">
+      {{ oneSpec }}
+  </li>
+</ul>

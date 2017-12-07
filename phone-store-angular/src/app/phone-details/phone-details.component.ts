@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { PhoneApiService, Phone } from '../services/phone-api.service';
+
 
 @Component({
   selector: 'app-phone-details',
@@ -7,9 +11,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneDetailsComponent implements OnInit {
 
-  constructor() { }
+  phoneInfo = new Phone();
+
+  constructor(
+    private activatedThang: ActivatedRoute,
+    private phoneThang: PhoneApiService
+  ) { }
 
   ngOnInit() {
-  }
+    // get the URL parameters of this route
+    this.activatedThang.params.subscribe((myReqParams) => {
+        //        {path: 'phones/:id'}
+        //                         |
+        console.log(myReqParams.id)
+
+        this.startAjaxCall(myReqParams.id);
+    });
+  } // ngOnInit()
+
+  startAjaxCall(urlId) {
+    this.phoneThang.getOnePhone(urlId)
+    .then((phoneResults: Phone) => {
+      // THE MAGIC HAPPENS HERE
+      // (assign API results to component property)
+      this.phoneInfo = phoneResults;
+    })
+    .catch((err) => {
+      alert("Sorry! Something went wrong.")
+
+      console.log("Phone List Error!")
+      console.log(err)
+    });
+  } // startAjaxCall()
 
 }
