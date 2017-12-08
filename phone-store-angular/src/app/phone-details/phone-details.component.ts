@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { PhoneApiService, Phone } from '../services/phone-api.service';
 
@@ -15,7 +15,8 @@ export class PhoneDetailsComponent implements OnInit {
 
   constructor(
     private activatedThang: ActivatedRoute,
-    private phoneThang: PhoneApiService
+    private phoneThang: PhoneApiService,
+    private routerThang: Router
   ) { }
 
   ngOnInit() {
@@ -43,5 +44,22 @@ export class PhoneDetailsComponent implements OnInit {
       console.log(err)
     });
   } // startAjaxCall()
+
+  startDeleteAjax() {
+    if (!confirm("Are you Sure?")) {
+      return;
+    }
+    this.phoneThang.deleteOnePhone(this.phoneInfo._id)
+    .then(() => {
+      // redirect with the Angular router to list of phones
+      this.routerThang.navigate(['/phones']);
+    })
+    .catch((err) => {
+      alert("Sorry! Something went wrong.")
+
+      console.log("Phone List Error!")
+      console.log(err)
+    });
+  } // startDeleteAjax()
 
 }

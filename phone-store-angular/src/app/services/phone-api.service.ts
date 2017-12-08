@@ -10,7 +10,7 @@ export class Phone {
   specs: string[];
 
   // these are assigned by the database
-  id: string;
+  _id: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -28,17 +28,20 @@ export class PhoneApiService {
   }
 
   // POST /api/phones
-  postPhones() {
 
-  }
 
   // GET /api/phones/:id
   getOnePhone(oneId: string){
   return this.httpThang.get(
     `${environment.backendUrl}/api/phones/${oneId}`
   ).toPromise();
-}
+  }
 
   // DELETE /api/phones/:id
+  deleteOnePhone(oneId: string) {
+  return this.httpThang.delete(
+    `${environment.backendUrl}/api/phones/${oneId}`
+  ).toPromise();
+  }
 
 }
