@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { UserApiService } from './services/user-api.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Phone Store';
+
+  constructor (private userThang: UserApiService) {}
+  
 }

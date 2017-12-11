@@ -1,17 +1,22 @@
 <header>
-<nav>
-  <a routerLink="/"> Home </a>
-  <a routerLink="/phones"> Our Phones </a>
-</nav>
+  <nav>
+    <a routerLink="/"> Home </a>
+    <a routerLink="/phones"> Our Phones </a>
+    <a *ngIf="!userThang.currentUser" routerLink="/join"> Join Us </a>
+  </nav>
 
+  <p *ngIf="userThang.currentUser">
+    Hello, <b>{{ userThang.currentUser.username }}</b>
+  </p>
   <div style="text-align:center">
     <h1>
       Welcome to {{ title }}!
     </h1>
     <img width="300" alt="Angular Logo" src="http://blog.creative-tim.com/wp-content/uploads/2017/04/banner-angularjs-730x410.jpg">
   </div>
-</header>
 
+</header>
+<br />
 
 <router-outlet></router-outlet>
 

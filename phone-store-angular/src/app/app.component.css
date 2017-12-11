@@ -1,4 +1,21 @@
 a {
   display: inline-block;
   margin: 5px;
+  font-size: 17px;
+}
+
+nav {
+  background-color: #123b41;
+  height: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header p {
+  align-self: flex-start;
+  font-size: 30px;
 }
