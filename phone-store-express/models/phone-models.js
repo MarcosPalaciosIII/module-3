@@ -19,7 +19,7 @@ const phoneSchema = new Schema(
     specs: [
       { type: String }
     ]
-  },
+    },
   {
     timestamp: true
   }
