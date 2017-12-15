@@ -52,6 +52,12 @@ app.use("/api", userApi);
 
 // ---------------------------------------------
 
+
+// send the Angular HTML if no Express routes match
+app.use((req, res, next) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
 // catch 404 and forward to error handler
 
 
