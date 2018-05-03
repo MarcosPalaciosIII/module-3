@@ -2,6 +2,11 @@ $("document").ready(() => {
   $(".postWalle").click(() => {
     postCharacter("WALL-E", "Head Laser", "Waste Allocation Robot");
   });
+
+  $(".postMinion").click(() => {
+    postCharacter("Minion", "Goggles", "Henchman");
+  });
+  
   $(".postCharacter").submit(() => {
     // prevent submission from refreshing the page
     event.preventDefault();
@@ -16,6 +21,9 @@ $("document").ready(() => {
     $(".postCharacter").trigger("reset");
 
   });
+
+
+
 
   $(".patchCharacter").submit(() => {
     event.preventDefault();
