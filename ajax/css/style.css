@@ -22,3 +22,13 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+
+.characterList {
+  width: 30vw;
+}
+
+.listOfCharacters {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}

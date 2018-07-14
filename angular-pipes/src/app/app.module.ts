@@ -22,7 +22,7 @@ import { SearchByNamePipe } from './my-pipes/search-by-name.pipe';
     SearchByNamePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
     // FormsModule is requred to use "ngModel" in your input
     FormsModule
   ],

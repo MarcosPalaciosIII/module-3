@@ -6,7 +6,7 @@ $("document").ready(() => {
   $(".postMinion").click(() => {
     postCharacter("Minion", "Goggles", "Henchman");
   });
-  
+
   $(".postCharacter").submit(() => {
     // prevent submission from refreshing the page
     event.preventDefault();
@@ -100,3 +100,38 @@ function patchCharacter (myId, myName, myWeapon, myOccupation) {
     console.log(err);
   });
 } // patchCharacter
+
+$("#showCharacters").click(function () {
+  $(".characterList").html(`
+    <h2> Loading... </h2>
+    `);
+
+  $.ajax({
+    method: "GET",
+    url: `https://ih-crud-api.herokuapp.com/characters`,
+  })
+  .then((apiResults) => {
+    console.log("SUCCESS!!");
+    console.log(apiResults);
+    $(".characterList").empty();
+
+
+    apiResults.forEach(function(oneCharacter) {
+      $(".characterList").append(
+        $(`
+        <p> <b>ID:</b> <i>${oneCharacter.id}</i> </p>
+        <h2> <i>${oneCharacter.name}</i> </h2>
+        <p> <b>Weapon:</b> <i>${oneCharacter.weapon}</i> </p>
+        <p> <b>Occupation:</b> <i>${oneCharacter.occupation}</i> </p>
+        <hr>
+        `)
+      );
+
+    });
+
+  })
+  .catch((err) => {
+    console.log("ERROR!!");
+    console.log(err);
+  });
+}); // showCharacters
